@@ -1,0 +1,7 @@
+1. Toán Tử / Chia thực (float division)
+2. Toán tử // – Chia lấy phần nguyên (floor division)
+3. Toán tử % – Chia lấy dư (modulo)
+4. Toán tử ** – Lũy thừa (exponentiation)
+5. Toán tử and – Và logic (logical AND)
+6. Toán tử or – Hoặc logic (logical OR)
+7. Toán tử is – So sánh định danh (identity operator)

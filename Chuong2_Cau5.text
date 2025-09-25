@@ -1,0 +1,3 @@
+Loại ghi chú	    Cú pháp	                     Mục đích sử dụng
+Ghi chú một dòng	# Ghi chú	                 Ghi chú nhanh, giải thích từng dòng lệnh
+Ghi chú nhiều dòng	''' Ghi chú ''' hoặc """	 Ghi chú dài, mô tả khối mã lớn
