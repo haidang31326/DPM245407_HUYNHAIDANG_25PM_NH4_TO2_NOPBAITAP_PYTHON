@@ -1,0 +1,13 @@
+Trường hợp	Lệnh gọi	val trước khi gọi	Kết quả in ra	val sau khi gọi
+1	        val = 5	        -	                -	            5
+            sum1(5)	        5	                15	            5
+            sum2()	        5	                15	            0
+            sum3()	        0	                0	            0
+2	val = 5	-	-	        5
+            sum1(5)	        5	                15	            5
+            sum3()	        5	                15	            5
+            sum2()	        5	                15	            0
+3	val = 5	                -	                -	            5
+            sum2()	        5	                15	            0
+            sum1(5)	        0	                15	            0
+            sum3()	        0	                0	            0
