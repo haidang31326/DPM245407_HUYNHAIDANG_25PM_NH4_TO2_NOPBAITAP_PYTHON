@@ -1,0 +1,12 @@
+ Giải thích cách chạy các dòng lệnh range
+(a) range(5) Kết quả: 0, 1, 2, 3, 4
+(b) range(5, 10) bắt đầu từ 5, kết thúc trước 10, bước nhảy 1
+(c) range(5, 20, 3) bắt đầu từ 5, kết thúc trước 20, bước nhảy 3
+(d) range(20, 5, -1) bắt đầu từ 20, kết thúc trước 5, bước nhảy -1 (mỗi lần giảm 1)
+(e) range(20, 5, -3) bắt đầu từ 20, kết thúc trước 5, bước nhảy -3 (mỗi lần giảm 3)
+(f) range(10, 5) bắt đầu từ 10, kết thúc trước 5, bước nhảy 1 do 10 > 5 kh chạy đc => kq: rỗng
+(g) range(0) bắt đầu và kết thúc cùng lúc => kq: cũng rỗng
+(h) range(10, 101, 10) bắt đầu từ 10, kết thúc trước 100, bước nhảy 10
+(i) range(10, -1, -1) bắt đầu từ 10, dừng trước -1, mỗi lần giảm 1
+(j) range(-3, 4) bắt đầu từ -3, dừng trước 4, bước mặc định là +1
+(k) range(0, 10, 1) bắt đầu 0, kết thúc trước 10, bước nhảy +1

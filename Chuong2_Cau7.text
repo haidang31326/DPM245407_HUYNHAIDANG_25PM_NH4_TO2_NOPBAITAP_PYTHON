@@ -1,6 +1,0 @@
- Mục đích	                          Cách làm
-1.Nhập chuỗi	                      input()
-2.Nhập số nguyên	                  int(input())
-3.Nhập số thực	                      float(input())
-4.Nhập nhiều giá trị	              map(int, input().split())
-5.Nhập danh sách	                  list(map(int, input().split()))
