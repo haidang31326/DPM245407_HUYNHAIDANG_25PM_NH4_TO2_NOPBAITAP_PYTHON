@@ -1,0 +1,50 @@
+Trình bày các loại lỗi khi lập trình và cách bắt lỗi trong Python.
+1. Lỗi Cú Pháp (Syntax Errors)
+    Nguyên nhân thường gặp:
+
+        Thiếu dấu hai chấm (:) sau câu lệnh if, for, def, while,...
+
+        Thiếu hoặc thừa dấu ngoặc đơn (), dấu ngoặc kép "" hoặc nháy đơn ''.
+
+        Sai tên lệnh (ví dụ: gõ pint thay vì print).
+
+        Lỗi thụt lề (Indentation Error) – Python sử dụng thụt lề để xác định khối lệnh.
+2. Lỗi Logic (Logic Errors)
+    Nguyên nhân thường gặp:
+
+        Sử dụng sai toán tử (ví dụ: dùng phép cộng + thay vì phép trừ -).
+
+        Sai điều kiện vòng lặp hoặc câu lệnh if.
+
+        Thụt lề sai làm thay đổi luồng thực thi của chương trình.
+3. Lỗi Thời Gian Chạy (Runtime Errors / Exceptions)
+    Lỗi thời gian chạy (hay Ngoại lệ - Exceptions) xảy ra khi chương trình đang chạy và gặp phải một tình huống không thể xử lý. Đây là loại lỗi có thể được bắt (handle) và xử lý trong code.
+
+    Các loại Ngoại lệ thường gặp:
+
+        TypeError: Thao tác trên các loại dữ liệu không tương thích (ví dụ: 10 + "xin chào").
+
+        NameError: Cố gắng sử dụng một biến chưa được định nghĩa hoặc bị gõ sai tên.
+
+        ZeroDivisionError: Cố gắng chia một số cho 0.
+
+        IndexError: Truy cập một phần tử ngoài phạm vi của list hoặc chuỗi.
+
+        ValueError: Hàm nhận một đối số có kiểu dữ liệu đúng nhưng giá trị lại không phù hợp (ví dụ: int("hello")).
+
+        FileNotFoundError: Cố gắng mở một tệp không tồn tại.
+4. Cách bắt lỗi trong Python
+    Để xử lý các Lỗi Thời Gian Chạy (Exceptions) và ngăn chương trình dừng đột ngột, em sử dụng cấu trúc try...except.
+
+        Cấu trúc try...except
+        vd:
+         try:
+            r=float(input("Mời bạn nhập bán kính hình tròn:"))
+            cv=2*math.pi*r
+            dt=r**2
+            print("Chu vi =",cv)
+            print("Diện tích=",dt)
+            break
+        except:
+            print("Lỗi rồi!")
+            Khi nhập ký tự thì chương trình sẽ báo Lỗi rồi!.

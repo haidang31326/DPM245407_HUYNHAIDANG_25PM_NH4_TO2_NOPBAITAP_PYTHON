@@ -1,0 +1,6 @@
+#Trình bày một số cách nhập dữ liệu từ bàn phím.
+''' 
+chuoi = input(".......")
+Có thể chuyển kiểu dữ liệu khi nhập như:
+songuyen = int(input("Hãy nhập số nguyên "))
+'''
