@@ -1,0 +1,14 @@
+import re
+
+def NegativeNumberInStrings(s):
+    negative_numbers = re.findall(r'-\d+', s)
+    
+    if negative_numbers:
+        print("Các số nguyên âm trong chuỗi là:")
+        for num in negative_numbers:
+            print(num)
+    else:
+        print("Không có số nguyên âm nào trong chuỗi.")
+
+text = "Trong chuỗi này có -12, -7 và cả 45, -100."
+NegativeNumberInStrings(text)

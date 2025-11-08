@@ -1,0 +1,9 @@
+Hàm	             Chức năng	                    Ví dụ
+len(s)	        Trả về độ dài chuỗi	            len("Hello") → 5
+max(s)	        Ký tự lớn nhất theo mã Unicode	max("abc") → 'c'
+min(s)	        Ký tự nhỏ nhất theo mã Unicode	min("abc") → 'a'
+s.lower()	    Chuyển toàn bộ thành chữ thường	"Hello".lower() → 'hello'
+s.upper()	    Chuyển thành chữ hoa	        "Hello".upper() → 'HELLO'
+s.title()	    Viết hoa chữ cái đầu mỗi từ	    "hello world".title() → 'Hello World'
+s.capitalize()	Viết hoa chữ đầu tiên của chuỗi	"python".capitalize() → 'Python'
+s.swapcase()	Đảo ngược hoa–thường	        "PyThOn".swapcase() → 'pYtHoN'
