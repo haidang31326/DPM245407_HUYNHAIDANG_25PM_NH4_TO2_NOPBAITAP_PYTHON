@@ -1,0 +1,8 @@
+import random
+
+N = int(input("Nhập số phần tử N: "))
+
+
+lst = random.sample(range(1, 100), N)
+
+print("Danh sách ngẫu nhiên:", lst)

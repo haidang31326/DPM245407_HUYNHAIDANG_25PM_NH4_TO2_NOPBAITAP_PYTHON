@@ -1,0 +1,55 @@
+def nhap_matrix(ten):
+    rows = int(input(f"Nhập số dòng của ma trận {ten}: "))
+    cols = int(input(f"Nhập số cột của ma trận {ten}: "))
+    print(f"Nhập các phần tử cho ma trận {ten} (cách nhau bằng dấu cách):")
+    matrix = []
+    for i in range(rows):
+        row = list(map(float, input(f"Hàng {i+1}: ").split()))
+        matrix.append(row)
+    return matrix
+
+
+def cong_matrix(A, B):
+    rows = len(A)
+    cols = len(A[0])
+    C = []
+    for i in range(rows):
+        row = []
+        for j in range(cols):
+            row.append(A[i][j] + B[i][j])
+        C.append(row)
+    return C
+
+
+def hoan_vi_matrix(M):
+    rows = len(M)
+    cols = len(M[0])
+    T = []
+    for j in range(cols):
+        row = []
+        for i in range(rows):
+            row.append(M[i][j])
+        T.append(row)
+    return T
+
+
+def in_matrix(M, ten):
+    print(f"\nMa trận {ten}:")
+    for row in M:
+        print(row)
+
+
+A = nhap_matrix("A")
+B = nhap_matrix("B")
+
+C = cong_matrix(A, B)
+
+in_matrix(A, "A")
+in_matrix(B, "B")
+in_matrix(C, "A + B")
+
+A_T = hoan_vi_matrix(A)
+B_T = hoan_vi_matrix(B)
+
+in_matrix(A_T, "Aᵗ (hoán vị của A)")
+in_matrix(B_T, "Bᵗ (hoán vị của B)")
