@@ -1,0 +1,111 @@
+import tkinter as tk
+
+
+def on_button_click(char):
+    """Thêm ký tự vào màn hình hiển thị."""
+    display.insert(tk.END, char)
+
+def calculate():
+    """Tính toán biểu thức trên màn hình."""
+    try:
+        
+        expression = display.get()
+        
+        result = str(eval(expression))
+      
+        clear_display()
+        display.insert(0, result)
+    except Exception as e:
+        clear_display()
+        display.insert(0, "Error")
+
+def clear_display():
+    """Xóa toàn bộ nội dung trên màn hình."""
+    display.delete(0, tk.END)
+
+
+
+
+window = tk.Tk()
+window.title("Calculator Đơn Giản")
+window.resizable(False, False) 
+
+
+display = tk.Entry(
+    window, 
+    width=24, 
+    font=("Arial", 20), 
+    borderwidth=2, 
+    relief="solid", 
+    justify="right" 
+)
+
+display.grid(row=0, column=0, columnspan=4, padx=10, pady=10)
+
+
+buttons = [
+    '7', '8', '9', '/',
+    '4', '5', '6', '*',
+    '1', '2', '3', '-',
+    '0', '.', '=', '+'
+]
+
+
+row_val = 1
+col_val = 0
+
+
+for button_text in buttons:
+    if button_text == '=':
+       
+        btn = tk.Button(
+            window, 
+            text=button_text, 
+            width=5, 
+            height=2, 
+            font=("Arial", 16),
+            command=calculate 
+        )
+    elif button_text == '.':
+   
+        btn = tk.Button(
+            window, 
+            text=button_text, 
+            width=5, 
+            height=2, 
+            font=("Arial", 16),
+            command=lambda: on_button_click('.')
+        )
+    else:
+      
+        btn = tk.Button(
+            window, 
+            text=button_text, 
+            width=5, 
+            height=2, 
+            font=("Arial", 16),
+            command=lambda char=button_text: on_button_click(char)
+        )
+    
+ 
+    btn.grid(row=row_val, column=col_val, padx=5, pady=5)
+    
+
+    col_val += 1
+    
+
+    if col_val > 3:
+        col_val = 0
+        row_val += 1
+
+clear_button = tk.Button(
+    window, 
+    text="C", 
+    width=23, 
+    height=2, 
+    font=("Arial", 16),
+    command=clear_display 
+)
+clear_button.grid(row=row_val, column=0, columnspan=4, padx=5, pady=5)
+
+window.mainloop()
